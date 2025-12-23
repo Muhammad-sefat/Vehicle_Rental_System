@@ -7,16 +7,17 @@ CREATE TABLE users (
     role VARCHAR(20) NOT NULL CHECK (role IN ('Admin', 'Customer')),
     name VARCHAR(100) NOT NULL,
     email VARCHAR(150) NOT NULL UNIQUE,
+    password VARCHAR(200) NOT NULL,
     phone VARCHAR(30)
 );
 
 -- ===== Users: 5 rows =====
-INSERT INTO users (role, name, email, phone) VALUES
-  ('Customer', 'Alice',   'alice@example.com',   '1234567890'),
-  ('Admin',    'Bob',     'bob@example.com',     '0987654321'),
-  ('Customer', 'Charlie', 'charlie@example.com', '1122334455'),
-  ('Customer', 'Diana',   'diana@example.com',   '01711111111'),
-  ('Customer', 'Evan',    'evan@example.com',    '01722222222');
+INSERT INTO users (role, name, email, password, phone) VALUES
+  ('Customer', 'Alice',   'alice@example.com', '12y3ughg3',  '1234567890'),
+  ('Admin',    'Bob',  'bob@example.com', '73763vcgf', '0987654321'),
+  ('Customer', 'Charlie', 'charlie@example.com', 'password23', '1122334455'),
+  ('Customer', 'Diana',   'diana@example.com',  'setere542', '01711111111'),
+  ('Customer', 'Evan',    'evan@example.com', 'ter353fcrer', '01722222222');
 
 
 -- Vehicles Table
